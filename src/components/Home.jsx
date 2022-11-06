@@ -25,8 +25,8 @@ const Home = () => {
     <div className='bg-white dark:bg-zinc-800 min-h-screen w-full'>
       <Navbar toggleMod={toggleMod} dark={dark}/>
       <About dark={dark}/>
-      <Techs/>
-      <Projects/>
+      <Techs dark={dark}/>
+      <Projects dark={dark}/>
       <Contact dark={dark}/>
     </div>
   )

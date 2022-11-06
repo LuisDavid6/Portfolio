@@ -23,13 +23,14 @@ const About = ({dark}) => {
               restDelta: 0.009,
               duration:8
             }}
-            className="text-center font-serif text-4xl sm:text-5xl mb-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-emerald-600">Luis David Patiño
+            // className="text-center font-serif text-4xl sm:text-5xl mb-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-emerald-600">Luis David Patiño
+            className="text-center font-serif text-4xl sm:text-5xl mb-6 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-great-blue-500 via-violet-600 to-emerald-700">Luis David Patiño
           </motion.h1>
           <motion.h3 
             initial={{opacity: 0}}
             animate={{opacity:1}}
             transition={{ease: "easeInOut", duration:3}}
-            className='font-serif text-xl text-center px-4'>Me considero un desarrollador apasionado por la tecnología y por el
+            className='font-serif text-xl text-center px-4 dark:text-white'>Me considero un desarrollador apasionado por la tecnología y por el
               aprendizaje constante enfocado en mejorar mis habilidades tanto técnicas como personales
           </motion.h3>
         </div>
@@ -52,7 +53,7 @@ const About = ({dark}) => {
         animate={{ scale:1.035, borderWidth:"1px", borderColor:"#606562", boxShadow: "12px 12px 15px rgba(0, 0, 0, 0.3)"}}
         transition={{ ease: "easeInOut", duration:3, repeat:Infinity, repeatType:'reverse' }}
         className="border border-b-4 border-neutral-400 border-l-4 shadow-2xl bg-slate-100 dark:bg-transparent w-9/12 font-serif text-xl text-center p-5 rounded-2xl text-great-blue-800 dark:text-stone-100 dark:border-y-green-700 dark:border-x-emerald-800">
-          <h4>Programación! Más que una profesión es una pasión</h4>
+          <h4 className='font-semibold'>¡Programación! Más que una profesión es mi pasión</h4>
       </motion.div>
         {/* <button className="border p-2 border-b-4 b-2 rounded-lg active:translate-y-1 dark:bg-gray-50 dark:border-gray-300 ">CV</button> */}
       <div className='flex mr-8 '>
