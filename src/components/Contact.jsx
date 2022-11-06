@@ -22,10 +22,10 @@ const Contact = ({dark}) => {
           className=" p-4 mt-24 dark:text-white h-full rounded-2xl">
 
           <div className="flex justify-center gap-3 mb-4">
-            <img alt="contact" src={contact} width="100px" className="-mt-10"></img>
+            <img alt="contact" src={contact} width="110px" className="-mt-11"></img>
           </div>
           <div className="flex gap-3 mb-4">
-            <RiLinkedinBoxFill color={dark==="true" ? "white" :'#3192F0'} size={40}/> 
+            <RiLinkedinBoxFill color='#3192F0' size={40}/> 
             <span className="self-center font-mono text-xs">linkedin.com/in/luis-david-patino</span>
           </div>
           <div className="flex gap-3 mb-4">
@@ -37,11 +37,11 @@ const Contact = ({dark}) => {
             <span className="self-center font-mono text-xs">luisdavid.0698@gmail.com</span>
           </div>
           <div className="flex gap-3">
-            <RiWhatsappFill color={dark==="true" ? 'white' : "#40CF49"} size={40} />
+            <RiWhatsappFill color="#40CF49" size={40} />
             <span className="self-center font-mono text-xs">+57 3134423350</span>
           </div>
         </motion.div>
-        <Form/>
+        <Form dark={dark}/>
       </div>
     </div>
   )
