@@ -4,6 +4,7 @@ import Techs from "./Techs";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { useState } from "react";
+import {BsFillArrowUpCircleFill} from "react-icons/bs"
 
 const Home = () => {
 
@@ -24,59 +25,15 @@ const Home = () => {
   return(
     <div className='bg-white dark:bg-zinc-800 min-h-screen w-full'>
       <Navbar toggleMod={toggleMod} dark={dark}/>
-      <About dark={dark}/>
+      <About dark={dark}/> 
       <Techs dark={dark}/>
       <Projects dark={dark}/>
       <Contact dark={dark}/>
+      <div className="fixed bottom-0 right-0 mr-3 mb-3 cursor-pointer">
+        <BsFillArrowUpCircleFill size={30} color={dark==="true" ? "white" : "black"} title="Volver arriba" onClick={()=>window.scrollTo(0,0)}/>
+      </div>
     </div>
   )
 }
-
-
-
-
-
-
-
-
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from "swiper/react";
-
-// // Import Swiper styles
-// import "swiper/css";
-// import "swiper/css/pagination";
-
-
-// // import required modules
-// import { Mousewheel, Pagination } from "swiper";
-
-// function Home() {
-//   return (
-//     <div className=" bg-red-400 max-w-lg max-h-44">
-//       <Swiper
-//         direction="vertical"
-//         slidesPerView={1}
-//         spaceBetween={30}
-//         pagination={true}
-//         scrollbar={false}
-//         modules={[Mousewheel, Pagination]}
-//         className="mySwiper"
-//       >
-//         <SwiperSlide>Slide 1</SwiperSlide>
-//         <SwiperSlide>Slide 2</SwiperSlide>
-//         <SwiperSlide>Slide 3</SwiperSlide>
-//         <SwiperSlide>Slide 4</SwiperSlide>
-//         <SwiperSlide>Slide 5</SwiperSlide>
-//         <SwiperSlide>Slide 6</SwiperSlide>
-//         <SwiperSlide>Slide 7</SwiperSlide>
-//         <SwiperSlide>Slide 8</SwiperSlide>
-//         <SwiperSlide>Slide 9</SwiperSlide>
-//       </Swiper>
-//     </div>
-//   );
-// }
-
-
-
 
 export default Home
