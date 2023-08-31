@@ -49,7 +49,17 @@ const projects = [
   {
     name: 'TechStore',
     images: [techstore1, techstore2, techstore3, techstore4, techstore5, techstore6, techstore7],
-    techs: ['React', 'Redux', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Bootstrap'],
+    techs: [
+      'React',
+      'Redux',
+      'TypeScript',
+      'Bootstrap',
+      'Node.js',
+      'Express',
+      'Prisma',
+      'PostgreSQL',
+      'Stripe',
+    ],
     description:
       'Ecommerce de productos tecnologicos con autenticación de usuarios y panel de administrador para manejar toda la información.',
     link: 'https://tech-store-t.vercel.app/home',
