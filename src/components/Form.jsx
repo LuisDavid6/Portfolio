@@ -6,29 +6,15 @@ import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-const Form = ({ dark }) => {
-  const shadow =
-    dark === 'true' ? '0px 5px 25px rgba(0, 0, 0, 50)' : '0px 5px 25px rgba(0, 0, 0, 0.5)'
+const Form = ({ theme }) => {
+  const shadow = theme === 'dark' ? '0px 5px 25px rgba(0, 0, 0, 50)' : '0px 5px 25px rgba(0, 0, 0, 0.5)'
   const data = useRef()
 
   const sendEmail = () => {
-    emailjs
-      .sendForm(
-        process.env.REACT_APP_SERVICE_ID,
-        'template_wnrxi2g',
-        data.current,
-        process.env.REACT_APP_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          // console.log(result.text);
-          successNotify()
-        },
-        (error) => {
-          // console.log(error.text);
-          errorNotify()
-        }
-      )
+    emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, 'template_wnrxi2g', data.current, process.env.REACT_APP_PUBLIC_KEY).then(
+      (result) => successNotify(),
+      (error) => errorNotify()
+    )
   }
 
   const formik = useFormik({
@@ -79,9 +65,7 @@ const Form = ({ dark }) => {
   return (
     <div className='w-full max-w-lg p-7 justify-center mb-10'>
       <form ref={data} onSubmit={formik.handleSubmit}>
-        <label className='block mb-2 ml-2 text-md font-medium text-gray-900 dark:text-gray-300'>
-          Nombre
-        </label>
+        <label className='block mb-2 ml-2 text-md font-medium text-gray-900 dark:text-gray-300'>Nombre</label>
         <input
           type='text'
           name='name'
@@ -91,13 +75,9 @@ const Form = ({ dark }) => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        <span className='text-xs font-bold text-red-700 flex justify-end dark:text-red-400'>
-          {formik.touched.name && formik.errors.name}
-        </span>
+        <span className='text-xs font-bold text-red-700 flex justify-end dark:text-red-400'>{formik.touched.name && formik.errors.name}</span>
 
-        <label className='block mb-2 mt-6 ml-2 text-md font-medium text-gray-900 dark:text-gray-300'>
-          Email
-        </label>
+        <label className='block mb-2 mt-6 ml-2 text-md font-medium text-gray-900 dark:text-gray-300'>Email</label>
         <input
           type='text'
           name='email'
@@ -107,13 +87,9 @@ const Form = ({ dark }) => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         />
-        <span className='text-xs font-bold text-red-700 flex justify-end dark:text-red-400'>
-          {formik.touched.email && formik.errors.email}
-        </span>
+        <span className='text-xs font-bold text-red-700 flex justify-end dark:text-red-400'>{formik.touched.email && formik.errors.email}</span>
 
-        <label className='block mt-6 mb-2 ml-2 text-md font-medium text-gray-900 dark:text-gray-300'>
-          Mensaje
-        </label>
+        <label className='block mt-6 mb-2 ml-2 text-md font-medium text-gray-900 dark:text-gray-300'>Mensaje</label>
         <textarea
           name='message'
           className='block p-2 py-2 px-3 w-full max-w-lg h-28 text-md text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:outline-blue-300 dark:bg-transparent dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500 dark:focus:border-transparent'
@@ -122,9 +98,7 @@ const Form = ({ dark }) => {
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
         ></textarea>
-        <span className='text-xs font-bold text-red-700 flex justify-end dark:text-red-400'>
-          {formik.touched.message && formik.errors.message}
-        </span>
+        <span className='text-xs font-bold text-red-700 flex justify-end dark:text-red-400'>{formik.touched.message && formik.errors.message}</span>
 
         <motion.button
           whileHover={{ scale: 1.2 }}

@@ -1,7 +1,7 @@
 import { RiSunFill } from 'react-icons/ri'
 import { IoMdMoon } from 'react-icons/io'
 
-const Navbar = ({ toggleMod, dark }) => {
+const Navbar = ({ handleChangeTheme, theme }) => {
   return (
     <div className='flex justify-end pr-3 lg:pr-10 pt-10 text-lg sm:text-xl font-semibold text-great-blue-600 dark:text-cyan-600 bg-transparent'>
       <ul className='flex gap-5'>
@@ -23,8 +23,8 @@ const Navbar = ({ toggleMod, dark }) => {
         >
           Contacto
         </li>
-        <button className='ml-3' onClick={() => toggleMod()}>
-          {dark === 'true' ? <RiSunFill /> : <IoMdMoon />}
+        <button className='ml-3' onClick={() => handleChangeTheme()}>
+          {theme === 'dark' ? <RiSunFill /> : <IoMdMoon />}
         </button>
       </ul>
     </div>

@@ -3,38 +3,32 @@ import Navbar from './NavBar'
 import Techs from './Techs'
 import Projects from './Projects'
 import Contact from './Contact'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 
 const Home = () => {
-  const [dark, setDark] = useState(window.sessionStorage.getItem('dark'))
+  // const [dark, setDark] = useState(window.sessionStorage.getItem('dark'))
+  const [theme, setTheme] = useState('dark')
 
-  if (!window.sessionStorage.getItem('dark')) {
-    window.sessionStorage.setItem('dark', 'false')
-  }
+  useEffect(() => {
+    if (theme === 'dark') document.querySelector('html').classList.add('dark')
+    else document.querySelector('html').classList.remove('dark')
+  }, [theme])
 
-  if (dark === 'true') document.documentElement.classList.add('dark')
-  else document.documentElement.classList.remove('dark')
-
-  const toggleMod = () => {
-    window.sessionStorage.setItem('dark', dark === 'false' ? 'true' : 'false')
-    setDark(dark === 'false' ? 'true' : 'false')
+  console.log(theme)
+  const handleChangeTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }
 
   return (
     <div className='bg-white dark:bg-zinc-800 min-h-screen w-full'>
-      <Navbar toggleMod={toggleMod} dark={dark} />
-      <About dark={dark} />
-      <Techs dark={dark} />
-      <Projects dark={dark} />
-      <Contact dark={dark} />
+      <Navbar handleChangeTheme={handleChangeTheme} theme={theme} />
+      <About theme={theme} />
+      <Techs />
+      <Projects />
+      <Contact theme={theme} />
       <div className='fixed bottom-0 right-0 mr-3 mb-3 cursor-pointer'>
-        <BsFillArrowUpCircleFill
-          size={30}
-          color={dark === 'true' ? 'white' : 'black'}
-          title='Volver arriba'
-          onClick={() => window.scrollTo(0, 0)}
-        />
+        <BsFillArrowUpCircleFill size={30} color={theme === 'dark' ? 'white' : 'black'} title='Volver arriba' onClick={() => window.scrollTo(0, 0)} />
       </div>
     </div>
   )

@@ -1,24 +1,21 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/effect-fade'
 import { FiExternalLink } from 'react-icons/fi'
 import { FaGithub } from 'react-icons/fa'
 import { Autoplay, EffectFade } from 'swiper'
 import { motion } from 'framer-motion'
 import { useProjects } from '../hooks/useProjects'
 
-const Projects = ({ dark }) => {
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/effect-fade'
+
+const Projects = () => {
   const { data: projects } = useProjects()
 
   return (
     <div id='projects' className='grid gap-6 justify-items-center mt-20 pt-10 pb-10'>
-      {dark === 'false' ? (
-        <h2 className='text-4xl p-1 mb-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500'>Proyectos</h2>
-      ) : (
-        <h2 className='text-4xl p-1 mb-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-great-blue-500 via-violet-600 to-emerald-700'>
-          Proyectos
-        </h2>
-      )}
+      <h2 className='text-4xl p-1 mb-10 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 dark:from-great-blue-500 dark:via-violet-600 dark:to-emerald-700'>
+        Proyectos
+      </h2>
 
       <section className='gap-10 flex flex-wrap max-w-5xl justify-center'>
         {projects?.map((e) => (
