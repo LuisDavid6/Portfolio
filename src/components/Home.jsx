@@ -15,7 +15,6 @@ const Home = () => {
     else document.querySelector('html').classList.remove('dark')
   }, [theme])
 
-  console.log(theme)
   const handleChangeTheme = () => {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }
