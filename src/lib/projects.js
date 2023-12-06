@@ -19,8 +19,23 @@ import netflix2 from '../assets/projects/netflix2.png'
 import netflix3 from '../assets/projects/netflix3.png'
 import netflix4 from '../assets/projects/netflix4.png'
 import netflix5 from '../assets/projects/netflix5.png'
+import bell1 from '../assets/projects/bell1.png'
+import bell2 from '../assets/projects/bell2.png'
+import bell3 from '../assets/projects/bell3.png'
+import bell4 from '../assets/projects/bell4.png'
+import bell5 from '../assets/projects/bell5.png'
 
 export const projects = [
+  {
+    name: 'Bell´s Food',
+    images: [bell1, bell2, bell3, bell4, bell5],
+    techs: ['NextJs', 'Next-Auth', 'Typescript', 'Tailwind', 'NestJs', 'Mongoose', 'MongoDB'],
+    description:
+      'Sitio web para pedir comida a domicilio tipo Rappi, en el cual te puedes registrar como usuario para hacer pedidos o como restaurante para publicar tus comidas, también cuenta con panel de administrador para gestionar los productos y pedidos en proceso. ',
+    link: 'https://bellsfood.vercel.app',
+    repo: 'https://github.com/LuisDavid6/Bell',
+    repo2: 'https://github.com/LuisDavid6/Bell-back',
+  },
   {
     name: 'Netflix Clone',
     images: [netflix1, netflix2, netflix3, netflix4, netflix5],

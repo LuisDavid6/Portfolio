@@ -50,16 +50,39 @@ const Projects = () => {
                 ))}
               </Swiper>
             </div>
-            <div className='flex mt-5 justify-between ml-3 mr-5'>
-              <h2 className='text-lg font-bold dark:text-white'>{e.name}</h2>
-              <div className='flex gap-3 items-center'>
-                <a href={e.repo} target='_blank' rel='noreferrer'>
-                  <FaGithub size={25} title='Ir al repositorio' className='dark:text-white cursor-pointer' />
-                </a>
-                <a href={e.link} target='_blank' rel='noreferrer'>
-                  <FiExternalLink size={30} title='Ir al sitio web' className='dark:text-white cursor-pointer' />
-                </a>
-              </div>
+            <div className='flex mt-5 justify-between ml-3 mr-5 items-center'>
+              <h2 className='text-xl font-bold dark:text-white'>{e.name}</h2>
+              {e.repo2 ? (
+                <div className='flex gap-3 items-center'>
+                  <section className='flex flex-col justify-center items-center'>
+                    <a href={e.repo} target='_blank' rel='noreferrer'>
+                      <FaGithub size={25} title='Ir al repositorio Frontend' className='dark:text-white cursor-pointer' />
+                    </a>
+                    <span className='text-xs dark:text-gray-300'>Front</span>
+                  </section>
+                  <section className='flex flex-col justify-center items-center'>
+                    <a href={e.repo2} target='_blank' rel='noreferrer'>
+                      <FaGithub size={25} title='Ir al repositorio Backend' className='dark:text-white cursor-pointer' />
+                    </a>
+                    <span className='text-xs dark:text-gray-300'>Back</span>
+                  </section>
+                  <section className='flex flex-col justify-center items-center'>
+                    <a href={e.link} target='_blank' rel='noreferrer'>
+                      <FiExternalLink size={25} title='Ir al sitio web' className='dark:text-white cursor-pointer' />
+                    </a>
+                    <span className='text-xs dark:text-gray-300'>Web</span>
+                  </section>
+                </div>
+              ) : (
+                <div className='flex gap-3 items-center'>
+                  <a href={e.repo} target='_blank' rel='noreferrer'>
+                    <FaGithub size={25} title='Ir al repositorio' className='dark:text-white cursor-pointer' />
+                  </a>
+                  <a href={e.link} target='_blank' rel='noreferrer'>
+                    <FiExternalLink size={30} title='Ir al sitio web' className='dark:text-white cursor-pointer' />
+                  </a>
+                </div>
+              )}
             </div>
             <div className='flex gap-2 mt-5 flex-wrap'>
               {e.techs?.map((t) => (
