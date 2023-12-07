@@ -29,9 +29,9 @@ export const projects = [
   {
     name: 'Bell´s Food',
     images: [bell1, bell2, bell3, bell4, bell5],
-    techs: ['NextJs', 'Next-Auth', 'Typescript', 'Tailwind', 'NestJs', 'Mongoose', 'MongoDB'],
+    techs: ['NextJs', 'Next-Auth', 'Typescript', 'Tailwind', 'NestJs', 'Swagger', 'Mongoose', 'MongoDB'],
     description:
-      'Sitio web para pedir comida a domicilio tipo Rappi, en el cual te puedes registrar como usuario para hacer pedidos o como restaurante para publicar tus comidas, también cuenta con panel de administrador para gestionar los productos y pedidos en proceso. ',
+      'Sitio web para pedir comida a domicilio tipo Rappi, en el cual te puedes registrar como usuario para hacer pedidos o como restaurante para publicar tus comidas, también cuenta con panel de administrador para gestionar los productos y pedidos en proceso.',
     link: 'https://bellsfood.vercel.app',
     repo: 'https://github.com/LuisDavid6/Bell',
     repo2: 'https://github.com/LuisDavid6/Bell-back',
@@ -40,7 +40,7 @@ export const projects = [
     name: 'Netflix Clone',
     images: [netflix1, netflix2, netflix3, netflix4, netflix5],
     techs: ['NextJs', 'Next-Auth', 'Typescript', 'Tailwind', 'Prisma', 'MongoDB'],
-    description: 'Clon de netflix con autenticación de usuarios, listado y visualización de peliculas ',
+    description: 'Clon de netflix con autenticación de usuarios, listado y visualización de peliculas.',
     link: 'https://netflix-clone10.vercel.app',
     repo: 'https://github.com/LuisDavid6/Netflix-clone',
   },
