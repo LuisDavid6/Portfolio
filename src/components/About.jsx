@@ -71,7 +71,7 @@ const About = ({ theme }) => {
           transition={{ ease: 'easeOut', duration: 4 }}
           className='bg-cyan-800 text-white text-2xl px-5 ms:px-8 py-2 rounded-md'
         >
-          <a href='https://drive.google.com/file/d/1SsGmEK2ZtcOya7yzsm-1ezGZV96_UsHs/view?usp=sharing' target='_blank' rel='noreferrer'>
+          <a href='https://drive.google.com/file/d/1yKjG1Jsg-kTiWHb1pmRxnMt3xx_ccsfY/view?usp=sharing' target='_blank' rel='noreferrer'>
             Descargar CV
           </a>
         </motion.button>
