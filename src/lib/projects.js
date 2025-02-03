@@ -54,7 +54,7 @@ export const projects = [
     techs: ['React', 'Redux', 'Node.js', 'Prisma', 'JWT', 'Bootstrap'],
     description:
       'Página web para realizar compra de boletas y dulceria para un cine, con panel de administrador para controlar las funciones de las peliculas.',
-    link: 'https://moon-cinema-app.vercel.app/home',
+    link: 'https://mooncinema.vercel.app/',
     repo: 'https://github.com/gjuancruz/PF',
   },
 ]
