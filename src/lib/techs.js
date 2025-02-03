@@ -18,6 +18,7 @@ import nest from '../assets/skills/nest.png'
 import next from '../assets/skills/next.png'
 import next_auth from '../assets/skills/next-auth.png'
 import mongo from '../assets/skills/mongo.png'
+import angular from '../assets/skills/angular.png'
 
 export const techs = [
   { name: 'JavaScript', image: js },
@@ -27,6 +28,7 @@ export const techs = [
   { name: 'Bootstrap', image: bootstrap },
   { name: 'Tailwind', image: tailwind },
   { name: 'Chakra UI', image: chakra },
+  { name: 'Angular', image: angular },
   { name: 'React', image: react },
   { name: 'Redux', image: redux },
   { name: 'NextJs', image: next },

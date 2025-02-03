@@ -1,6 +1,3 @@
-import countries1 from '../assets/projects/countries1.png'
-import countries2 from '../assets/projects/countries2.png'
-import countries3 from '../assets/projects/countries3.png'
 import cine1 from '../assets/projects/cine1.png'
 import cine2 from '../assets/projects/cine2.png'
 import cine3 from '../assets/projects/cine3.png'
@@ -13,7 +10,6 @@ import techstore4 from '../assets/projects/techstore4.png'
 import techstore5 from '../assets/projects/techstore5.png'
 import techstore6 from '../assets/projects/techstore6.png'
 import techstore7 from '../assets/projects/techstore7.png'
-import portfolio from '../assets/projects/portfolio.png'
 import netflix1 from '../assets/projects/netflix1.png'
 import netflix2 from '../assets/projects/netflix2.png'
 import netflix3 from '../assets/projects/netflix3.png'
@@ -60,21 +56,5 @@ export const projects = [
       'Página web para realizar compra de boletas y dulceria para un cine, con panel de administrador para controlar las funciones de las peliculas.',
     link: 'https://moon-cinema-app.vercel.app/home',
     repo: 'https://github.com/gjuancruz/PF',
-  },
-  {
-    name: 'Portafolio',
-    images: [portfolio],
-    techs: ['React', 'Tailwind', 'Swiper', 'Framer Motion', 'Formik', 'EmailJs'],
-    description: 'Mi portafolio como desarrollador',
-    link: 'https://portfolio-luisdavid.vercel.app',
-    repo: 'https://github.com/LuisDavid6/Portfolio',
-  },
-  {
-    name: 'Countries App',
-    images: [countries1, countries2, countries3],
-    techs: ['React', 'Redux', 'Node.js', 'Express', 'PostgreSQL'],
-    description: 'SPA que filtra información sobre los paises con opción de agregar actividades turisticas a los mismos.',
-    link: 'https://countries-jgl.vercel.app',
-    repo: 'https://github.com/LuisDavid6/PI-Countries',
   },
 ]
